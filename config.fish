@@ -3,7 +3,7 @@ if status is-interactive
 end
 
 # if test -z $DISPLAY; and test (tty) = "/dev/tty1"
-#     wayfire
+#     Hyprland
 # end
 
 # Start X at login

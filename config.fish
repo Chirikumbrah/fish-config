@@ -3,13 +3,13 @@ if status is-interactive
 end
 
 # if test -z $DISPLAY; and test (tty) = "/dev/tty1"
-#     Hyprland
+#     ~/.startw
 # end
 
 # Start X at login
 if status is-login
     if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
-        exec startx -- -keeptty
+        exec startx -- -keeptty 2&> /tmp/startx.log
     end
 end
 

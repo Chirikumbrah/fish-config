@@ -1,18 +1,19 @@
 function o
   if count $argv > /dev/null
     if test "$argv[1]" = "$HOME/" || test "$argv[1]" = "$HOME" || test "$argv[1]" = "/"
-      set FILE "$(fd . "$argv[1]" --hidden --type=file --color=always | fzf --ansi)"
+      set FILE "$(fd . "$argv[1]" --hidden --type=file --color=always | fzf --ansi -m)"
     else
-      set FILE "$argv[1]"
+      set FILE "$argv"
     end
   else
-    set FILE "$(fd --hidden --type=file --color=always | fzf --ansi)"
+    set FILE "$(fd --hidden --type=file --color=always | fzf --ansi -m)"
   end
   if test $FILE != ''
-    if test "$(echo $FILE | grep -iE '\.(jpe?g|png|gif|svg|webp|tiff|heif|heic|avif|ico|bmp)$')"
-      $IMAGE_VIEWER "$FILE" &> /dev/null & disown
+    if test "$(echo $FILE | grep -iE '\.(jpg|jpe?g|png|gif|svg|webp|tiff|heif|heic|avif|ico|bmp)$')"
+      set APP $IMAGE_VIEWER
     else
-      xdg-open "$FILE" &> /dev/null & disown
+      set APP xdg-open
     end
   end
+  echo $FILE | nohup xargs $APP &> /dev/null & disown
 end

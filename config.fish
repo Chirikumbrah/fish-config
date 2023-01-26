@@ -28,4 +28,5 @@ set -U SHELL '/bin/fish'
 
 set --universal fish_user_paths $fish_user_paths "$HOME/.local/bin"
 
+zoxide init fish | source
 starship init fish | source

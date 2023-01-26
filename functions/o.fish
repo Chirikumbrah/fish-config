@@ -9,10 +9,10 @@ function o
     set FILE "$(fd --hidden --type=file --color=always | fzf --ansi)"
   end
   if test $FILE != ''
-    if test "$(echo $FILE | grep -iE '\.(jpe?g|png|gif|svg|webp|tiff|heif|avif|ico|bmp)$')"
-      $IMAGE_VIEWER "$FILE" &> /dev/null &
+    if test "$(echo $FILE | grep -iE '\.(jpe?g|png|gif|svg|webp|tiff|heif|heic|avif|ico|bmp)$')"
+      $IMAGE_VIEWER "$FILE" &> /dev/null & disown
     else
-      xdg-open "$FILE" &> /dev/null &
+      xdg-open "$FILE" &> /dev/null & disown
     end
   end
 end

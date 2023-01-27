@@ -1,3 +1,3 @@
-function glg --wraps='git log --stat --max-count=10' --description 'alias glg=git log --stat --max-count=10'
-  git log --stat --max-count=10 $argv; 
+function glg --wraps='git log --stat' --description 'alias glg=git log --stat'
+  git log --stat $argv; 
 end

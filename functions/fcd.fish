@@ -9,6 +9,6 @@ function fcd
     set DIR "$(fd --hidden --type=directory --color=always | fzf --ansi)"
   end
   if test $DIR != ''
-    cd $DIR
+    z $DIR
   end 
 end

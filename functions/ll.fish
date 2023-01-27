@@ -1,3 +1,3 @@
 function ll
-  set loc (llama $argv); and cd $loc;
+  set loc (llama $argv); and z $loc;
 end

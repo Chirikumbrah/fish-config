@@ -15,5 +15,5 @@ function o
       set APP xdg-open
     end
   end
-  echo $FILE | nohup xargs $APP &> /dev/null & disown
+  echo "$FILE" | sed -e "s/ /\\\ /g" | nohup xargs $APP &> /dev/null & disown
 end

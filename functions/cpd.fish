@@ -1,3 +1,3 @@
-function cpd --wraps='cp -r' --description 'alias cpd=cp -r'
-  cp -r $argv; 
+function cpd --wraps='cp -v -r' --description 'alias cpd=cp -v -r'
+  cp -v -r $argv; 
 end

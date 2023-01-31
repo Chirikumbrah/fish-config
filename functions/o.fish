@@ -1,7 +1,7 @@
 function o
   if count $argv > /dev/null
     if test "$argv[1]" = "$HOME/" || test "$argv[1]" = "$HOME" || test "$argv[1]" = "/"
-      set FILE "$(fd . "$argv[1]" --hidden -a --tf --color=always | fzf --ansi -m)"
+      set FILE "$(fd . "$argv[1]" --hidden -a -tf --color=always | fzf --ansi -m)"
     else
       set FILE "$argv"
     end

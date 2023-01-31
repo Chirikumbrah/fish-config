@@ -19,7 +19,7 @@ set -gx LANG 'en_US.UTF-8'
 set -gx LC_ALL $LANG
 set -gx BROWSER 'chromium'
 set -gx IMAGE_VIEWER 'nsxiv'
-set -gx VIDEO_PLAYER 'ffplay'
+set -gx VIDEO_PLAYER 'mpv'
 set -gx CM_LAUNCHER 'dmenu'
 set -gx SCRIPTS "$HOME/.scripts"
 set -gx EDITOR 'hx'

@@ -1,3 +1,3 @@
-function mv --description 'alias mv=mv -v -i'
- command mv -v -i $argv; 
+function mv --description 'alias mv=pymv'
+  pymv $argv; 
 end

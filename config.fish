@@ -18,7 +18,7 @@ set -U fish_greeting
 set -gx LANG 'en_US.UTF-8'
 set -gx LC_ALL $LANG
 set -gx BROWSER 'chromium'
-set -gx IMAGE_VIEWER 'nsxiv'
+set -gx IMAGE_VIEWER 'qimgv'
 set -gx PDF_VIEWER 'zathura'
 set -gx VIDEO_PLAYER 'mpv'
 set -gx CM_LAUNCHER 'dmenu'

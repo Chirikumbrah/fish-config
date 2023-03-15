@@ -23,6 +23,7 @@ set -gx PDF_VIEWER 'zathura'
 set -gx VIDEO_PLAYER 'mpv'
 set -gx CM_LAUNCHER 'dmenu'
 set -gx SCRIPTS "$HOME/.scripts"
+set -gx YRDATA "$HOME/.yrdata"
 set -gx EDITOR 'hx'
 set -gx VISUAL $EDITOR
 set -U SHELL '/bin/fish'

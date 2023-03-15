@@ -1,3 +1,3 @@
-function cd-screenshots --wraps='cd ~/.yrdata/images/screenshots' --description 'alias cd-screenshots=cd ~/.yrdata/images/screenshots'
-  cd ~/.yrdata/images/screenshots $argv; 
+function cd-screenshots --wraps='cd $YRDATA/images/screenshots' --description 'alias cd-screenshots=cd $YRDATA/images/screenshots'
+  cd $YRDATA/images/screenshots $argv; 
 end

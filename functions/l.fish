@@ -1,3 +1,3 @@
-function l --wraps='exa --git -ab --icons --classify' --description 'alias l=exa --git -ab --icons --classify'
-  exa --git -ab --icons --classify $argv; 
+function l --wraps='exa --git -alb --icons --classify' --description 'alias l=exa --git -alb --icons --classify'
+  exa --git -alb --icons --classify $argv; 
 end

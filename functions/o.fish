@@ -9,7 +9,7 @@ function o
     set FILE "$(fd --hidden -a -tf --color=always | fzf --ansi -m --preview '~/.scripts/system/fzf-preview.sh {}')"
   end
   if test $FILE != ''
-    if test "$(echo $FILE | grep -iE '\.(jpg|jpe?g|png|gif|svg|webp|tiff|heif|heic|avif|ico|bmp)$')"
+    if test "$(echo $FILE | command grep -iE '\.(jpg|jpe?g|png|gif|svg|webp|tiff|heif|heic|avif|ico|bmp)$')"
       set APP $IMAGE_VIEWER
     else
       set APP xdg-open

@@ -2,6 +2,7 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+# Start Wayland at login
 # if test -z $DISPLAY; and test (tty) = "/dev/tty1"
 #     ~/.scripts/system/wayland/Hyprland.sh
 # end

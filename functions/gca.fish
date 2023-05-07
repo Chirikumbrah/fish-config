@@ -1,3 +1,3 @@
-function gca --wraps='git commit -v -a --amend' --description 'alias gca=git commit -v -a --amend'
-  git commit -v --amend $argv; 
+function gca --wraps='git commit -v --amend --no-edit' --description 'alias gca=git commit -v --amend --no-edit'
+  git commit -v --amend --no-edit $argv; 
 end

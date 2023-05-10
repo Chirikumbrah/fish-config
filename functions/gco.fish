@@ -1,3 +1,3 @@
-function gco --wraps='git checkout -b' --description 'alias gco=git checkout -b'
-  git checkout -b $argv; 
+function gco --wraps='git checkout' --description 'alias gco=git checkout'
+  git checkout $argv; 
 end

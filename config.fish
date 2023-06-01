@@ -14,6 +14,11 @@ if status is-login
     end
 end
 
+# Make su launch fish
+function su
+   command su --shell=/usr/bin/fish $argv
+end
+
 # Disable welcome message
 set -U fish_greeting
 set -gx LANG 'en_US.UTF-8'

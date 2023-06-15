@@ -34,7 +34,7 @@ set -gx EDITOR 'hx'
 set -gx VISUAL $EDITOR
 set -U SHELL '/bin/fish'
 
-set --universal fish_user_paths $fish_user_paths "$HOME/.local/bin" "$HOME/.nix-profile/bin"
+set --universal fish_user_paths $fish_user_paths "$HOME/.config/emacs/bin" "$HOME/.local/bin" "$HOME/.nix-profile/bin"
 
 zoxide init fish | source
 starship init fish | source

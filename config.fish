@@ -4,7 +4,7 @@ end
 
 # Start Wayland at login
 if test -z $DISPLAY; and test (tty) = "/dev/tty1"
-    ~/.config/hypr/scripts/Hyprland.sh
+    ~/.config/hypr/scripts/Hyprland.sh 2&> /tmp/Hyprland-startup.log
 end
 
 # Start X at login

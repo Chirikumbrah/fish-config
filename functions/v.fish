@@ -1,3 +1,3 @@
-function v --wraps=hx --description 'alias v=hx'
+function v --wraps=helix --description 'alias v=helix'
   hx $argv; 
 end

@@ -3,16 +3,16 @@ if status is-interactive
 end
 
 # Start Wayland at login
-# if test -z $DISPLAY; and test (tty) = "/dev/tty1"
-#     ~/.scripts/system/wayland/Hyprland.sh
-# end
+if test -z $DISPLAY; and test (tty) = "/dev/tty1"
+    ~/.config/hypr/scripts/Hyprland.sh
+end
 
 # Start X at login
-if status is-login
-    if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
-        exec startx -- -keeptty 2&> /tmp/startx.log
-    end
-end
+# if status is-login
+#     if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
+#         exec startx -- -keeptty 2&> /tmp/startx.log
+#     end
+# end
 
 # Make su launch fish
 function su
@@ -25,12 +25,12 @@ set -gx LANG 'en_US.UTF-8'
 set -gx LC_ALL $LANG
 set -gx BROWSER 'chromium'
 set -gx IMAGE_VIEWER 'qimgv'
-set -gx PDF_VIEWER 'zathura'
+set -gx PDF_VIEWER 'qpdfview'
 set -gx VIDEO_PLAYER 'mpv'
-set -gx CM_LAUNCHER 'dmenu'
+# set -gx CM_LAUNCHER 'dmenu'
 set -gx SCRIPTS "$HOME/.scripts"
-set -gx YRDATA "$HOME/.yrdata"
-set -gx EDITOR 'hx'
+# set -gx YRDATA "$HOME/.yrdata"
+set -gx EDITOR 'helix'
 set -gx VISUAL $EDITOR
 set -U SHELL '/bin/fish'
 

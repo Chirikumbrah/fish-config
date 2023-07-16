@@ -9,7 +9,7 @@ function getpath
     set FILE "$(fd --hidden -a -tf -td --color=always | fzf --ansi --preview '~/.config/fish/scripts/fzf-preview.sh {}')"
   end
   if test $FILE != ''
-    echo $FILE | tr -d '\n' | xclip -selection c
+    echo $FILE | tr -d '\n' | wl-copy
     echo $FILE
   end
 end

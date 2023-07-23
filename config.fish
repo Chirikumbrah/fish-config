@@ -3,8 +3,8 @@ if status is-interactive
 end
 
 # Start Wayland at login
-if test -z $DISPLAY; and test (tty) = "/dev/tty1"
-    ~/.config/hypr/scripts/Hyprland.sh 2&> /tmp/Hyprland-startup.log
+if test -z $DISPLAY; and test (tty) = /dev/tty1
+    ~/.config/hypr/scripts/Hyprland.sh 2&>/tmp/Hyprland-startup.log
 end
 
 # Start X at login
@@ -16,23 +16,23 @@ end
 
 # Make su launch fish
 function su
-   command su --shell=/usr/bin/fish $argv
+    command su --shell=/usr/bin/fish $argv
 end
 
 # Disable welcome message
 set -U fish_greeting
 set -gx LANG 'en_US.UTF-8'
 set -gx LC_ALL $LANG
-set -gx BROWSER 'chromium'
-set -gx IMAGE_VIEWER 'qimgv'
-set -gx PDF_VIEWER 'qpdfview'
-set -gx VIDEO_PLAYER 'mpv'
+set -gx BROWSER chromium
+set -gx IMAGE_VIEWER qimgv
+set -gx PDF_VIEWER qpdfview
+set -gx VIDEO_PLAYER mpv
 # set -gx CM_LAUNCHER 'dmenu'
 set -gx SCRIPTS "$HOME/.scripts"
 # set -gx YRDATA "$HOME/.yrdata"
-set -gx EDITOR 'helix'
+set -gx EDITOR helix
 set -gx VISUAL $EDITOR
-set -U SHELL '/bin/fish'
+set -U SHELL /bin/fish
 
 set --universal fish_user_paths $fish_user_paths "$HOME/.config/emacs/bin" "$HOME/.local/bin" "$HOME/.nix-profile/bin"
 

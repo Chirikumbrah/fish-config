@@ -27,14 +27,12 @@ set -gx BROWSER chromium
 set -gx IMAGE_VIEWER qimgv
 set -gx PDF_VIEWER qpdfview
 set -gx VIDEO_PLAYER mpv
-# set -gx CM_LAUNCHER 'dmenu'
 set -gx SCRIPTS "$HOME/.scripts"
-# set -gx YRDATA "$HOME/.yrdata"
 set -gx EDITOR helix
-set -gx VISUAL $EDITOR
+set -gx VISUAL helix
 set -U SHELL /bin/fish
 
-set --universal fish_user_paths $fish_user_paths "$HOME/.config/emacs/bin" "$HOME/.local/bin" "$HOME/.nix-profile/bin"
+set --universal fish_user_paths $fish_user_paths "$HOME/.config/emacs/bin" "$HOME/go/bin" "$HOME/.local/bin" "$HOME/.nix-profile/bin"
 
 zoxide init fish | source
 starship init fish | source

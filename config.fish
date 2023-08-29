@@ -29,7 +29,8 @@ set -gx PDF_VIEWER qpdfview
 set -gx VIDEO_PLAYER mpv
 set -gx SCRIPTS "$HOME/.scripts"
 set -gx EDITOR helix
-set -gx VISUAL helix
+set -gx GIT_EDITOR $EDITOR
+set -gx VISUAL $EDITOR
 set -U SHELL /bin/fish
 
 set --universal fish_user_paths $fish_user_paths "$HOME/.config/emacs/bin" "$HOME/go/bin" "$HOME/.local/bin" "$HOME/.nix-profile/bin"

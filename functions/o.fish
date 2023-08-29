@@ -1,19 +1,19 @@
 function o
-  if count $argv > /dev/null
-    if test "$argv[1]" = "$HOME/" || test "$argv[1]" = "$HOME" || test "$argv[1]" = "/"
-      set FILE "$(fd . "$argv[1]" --hidden -a -tf --color=always | fzf --ansi -m --preview '~/.config/fish/scripts/fzf-preview.sh {}')"
+    if count $argv >/dev/null
+        if test "$argv[1]" = "$HOME/" || test "$argv[1]" = "$HOME" || test "$argv[1]" = /
+            set FILE "$(fd . "$argv[1]" --hidden -a -tf --color=always | fzf --ansi -m --preview '~/.config/fish/scripts/fzf-preview.sh {}')"
+        else
+            set FILE "$argv"
+        end
     else
-      set FILE "$argv"
+        set FILE "$(fd --hidden -a -tf --color=always | fzf --ansi -m --preview '~/.config/fish/scripts/fzf-preview.sh {}')"
     end
-  else
-    set FILE "$(fd --hidden -a -tf --color=always | fzf --ansi -m --preview '~/.config/fish/scripts/fzf-preview.sh {}')"
-  end
-  if test $FILE != ''
-    if test "$(echo $FILE | command grep -iE '\.(jpg|jpe?g|png|gif|svg|webp|tiff|heif|heic|avif|ico|bmp)$')"
-      set APP $IMAGE_VIEWER
-    else
-      set APP xdg-open
+    if test $FILE != ''
+        if test "$(echo $FILE | command grep -iE '\.(jpg|jpe?g|png|gif|svg|webp|tiff|heif|heic|avif|ico|bmp)$')"
+            set APP $IMAGE_VIEWER
+        else
+            set APP xdg-open
+        end
     end
-  end
-  echo "$FILE" | sed -e "s/ /\\\ /g" | nohup xargs $APP &> /dev/null & disown
+    echo "$FILE" | sed -e "s/ /\\\ /g" | nohup xargs $APP &>/dev/null & disown
 end

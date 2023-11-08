@@ -1,4 +1,4 @@
-function python --wraps=/opt/homebrew/bin/python3 --description 'alias python=/opt/homebrew/bin/python3'
-  /opt/homebrew/bin/python3 $argv
-        
+function python --wraps=/Library/Frameworks/Python.framework/Versions/3.11/bin/python3 --description 'alias python=/Library/Frameworks/Python.framework/Versions/3.11/bin/python3'
+    /Library/Frameworks/Python.framework/Versions/3.11/bin/python3 $argv
+
 end

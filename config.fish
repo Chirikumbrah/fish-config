@@ -26,7 +26,7 @@ set -gx GIT_EDITOR $EDITOR
 set -gx VISUAL $EDITOR
 set -U SHELL /bin/fish
 
-set --universal fish_user_paths $fish_user_paths "/opt/homebrew/bin" "/Applications/Postgres.app/Contents/Versions/latest/bin" "/Library/Frameworks/Python.framework/Versions/3.11/bin"
+set --universal fish_user_paths $fish_user_paths /opt/homebrew/bin "/Applications/Postgres.app/Contents/Versions/latest/bin" "/Library/Frameworks/Python.framework/Versions/3.12/bin"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 zoxide init fish | source
